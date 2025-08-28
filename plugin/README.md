@@ -42,6 +42,7 @@ This suite supports **task management, comments, spaces, lists, custom fields, t
 3. Install dependencies:
    ```bash
    pip install -r requirements.txt
+   python -m pip install aiohttp
    ```
 
 ---
@@ -110,6 +111,22 @@ plugin/
                 │    ├── plugin.py
                 │    ├── plugin_schema.yml
                 │    └── test_add_task_comment.py
+                ├── create_space/        # Plugin: Create a new space
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_create_space.py
+                ├── get_spaces/        # Plugin: List available spaces
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_get_spaces.py
+                ├── get_custom_fields/        # Plugin: Retrieve available custom fields
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_get_custom_fields.py
+                ├── set_custom_field_value/        # Plugin: Update custom field values on tasks
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_set_custom_field_value.py
 
 ```
 
@@ -124,7 +141,6 @@ plugin/
 
 ### 💬 Comments
 - **add_task_comment** – Add comments to a task.
-- **delete_task_comment** – Delete a comment from a task.
 
 ### 📂 Spaces & Lists
 - **create_space** – Create a new space in a team.
