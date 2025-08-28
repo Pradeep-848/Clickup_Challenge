@@ -1,0 +1,22 @@
+# Bundle information
+bundle_name: "Your Bundle Name"
+bundle_description: "Description of your bundle"
+
+# Credentials
+credential_api_key_description: "API Key for authentication"
+
+# Plugin names and descriptions
+your_plugin_name: "Your Plugin Name"
+your_plugin_description: "Description of your plugin"
+
+# Plugin inputs
+your_plugin_input_name: "Input Name"
+your_plugin_input_description: "Description of the input"
+
+# Plugin outputs
+your_plugin_output_name: "Output Name"
+your_plugin_output_description: "Description of the output"
+
+# Operation fields
+your_plugin_operation_name: "Operation"
+your_plugin_operation_description: "The operation to perform"

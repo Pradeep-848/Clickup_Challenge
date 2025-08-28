@@ -1,0 +1,40 @@
+id: create_task
+name: i18n:create_task_name
+description: i18n:create_task_description
+input_schema:
+  list_id:
+    name: i18n:create_task_input_list_id_name
+    description: i18n:create_task_input_list_id_description
+    type: string
+    required: true
+  name:
+    name: i18n:create_task_input_name_name
+    description: i18n:create_task_input_name_description
+    type: string
+    required: true
+  description:
+    name: i18n:create_task_input_description_name
+    description: i18n:create_task_input_description_description
+    type: string
+    required: false
+  assignees:
+    name: i18n:create_task_input_assignees_name
+    description: i18n:create_task_input_assignees_description
+    type: string
+    required: false
+  priority:
+    name: i18n:create_task_input_priority_name
+    description: i18n:create_task_input_priority_description
+    type: string
+    required: false
+  due_date:
+    name: i18n:create_task_input_due_date_name
+    description: i18n:create_task_input_due_date_description
+    type: string
+    required: false
+output_schema:
+  task:
+    name: i18n:create_task_output_task_name
+    description: i18n:create_task_output_task_description
+    type: string
+    required: true

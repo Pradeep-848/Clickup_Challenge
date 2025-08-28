@@ -1,0 +1,20 @@
+id: search_tasks
+name: i18n:search_tasks_name
+description: i18n:search_tasks_description
+input_schema:
+  team_id:
+    name: i18n:search_tasks_input_team_id_name
+    description: i18n:search_tasks_input_team_id_description
+    type: string
+    required: true
+  query:
+    name: i18n:search_tasks_input_query_name
+    description: i18n:search_tasks_input_query_description
+    type: string
+    required: true
+output_schema:
+  tasks:
+    name: i18n:search_tasks_output_tasks_name
+    description: i18n:search_tasks_output_tasks_description
+    type: string
+    required: true

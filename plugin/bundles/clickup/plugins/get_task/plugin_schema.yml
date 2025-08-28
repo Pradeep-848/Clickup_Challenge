@@ -1,0 +1,15 @@
+id: get_task
+name: i18n:get_task_name
+description: i18n:get_task_description
+input_schema:
+  task_id:
+    name: i18n:get_task_input_task_id_name
+    description: i18n:get_task_input_task_id_description
+    type: string
+    required: true
+output_schema:
+  task:
+    name: i18n:get_task_output_task_name
+    description: i18n:get_task_output_task_description
+    type: string
+    required: true
