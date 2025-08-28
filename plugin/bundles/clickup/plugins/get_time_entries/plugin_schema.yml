@@ -1,0 +1,11 @@
+name: get_time_entries
+description: Retrieve time tracking entries for a task
+input_parameters:
+  - name: task_id
+    type: string
+    description: The task ID to fetch time entries from
+    required: true
+output_parameters:
+  - name: time_entries
+    type: array
+    description: List of tracked time entries for the task

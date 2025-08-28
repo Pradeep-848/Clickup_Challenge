@@ -1,0 +1,23 @@
+name: track_time
+description: Add time tracking entry to a ClickUp task
+input_parameters:
+  - name: task_id
+    type: string
+    description: The task ID to track time for
+    required: true
+  - name: start
+    type: integer
+    description: Start time in UNIX timestamp (ms)
+    required: true
+  - name: end
+    type: integer
+    description: End time in UNIX timestamp (ms)
+    required: true
+  - name: description
+    type: string
+    description: Optional description for the time entry
+    required: false
+output_parameters:
+  - name: time_entry
+    type: object
+    description: Created time tracking entry details
