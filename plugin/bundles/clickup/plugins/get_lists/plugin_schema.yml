@@ -1,0 +1,15 @@
+name: get_lists
+description: Retrieve lists inside a ClickUp space (or inside a specific folder if provided)
+input_parameters:
+  - name: space_id
+    type: string
+    description: The ID of the space to fetch lists from
+    required: true
+  - name: folder_id
+    type: string
+    description: (Optional) The folder ID if you want lists from a specific folder
+    required: false
+output_parameters:
+  - name: lists
+    type: object
+    description: List of ClickUp lists with id, name, task_count, archived, folder_id, and space_id

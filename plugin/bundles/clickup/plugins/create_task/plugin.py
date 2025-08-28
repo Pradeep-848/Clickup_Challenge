@@ -5,6 +5,7 @@ from bundles.clickup.shared.api_client import ClickUpClient
 class CreateTask(PluginHandler):
     async def execute(self, credentials: BundleCredentials, plugin_input: PluginInput) -> PluginOutput:
         # Extract token from credentials
+        
         api_token = credentials.credentials.get("CLICKUP_API_TOKEN")
         client = ClickUpClient(api_token)
 

@@ -1,7 +1,7 @@
 import sys, os, asyncio
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../..")))
 
-from bundles.clickup.plugins.get_lists.plugin import GetLists
+from bundles.clickup.plugins.get_spaces.plugin import GetSpaces
 from bundle_dependency import PluginInput, BundleCredentials
 
 async def run():
@@ -9,13 +9,11 @@ async def run():
         "CLICKUP_API_TOKEN": "pk_224694395_67HX9N5GIA9E3JT9BZ2LWIPBRQ8P32DV"
     })
 
-    # Example: get lists under Space IT (space_id: 90164829568)
     plugin_input = PluginInput(input_params={
-        "space_id": "90164829568"
-        # "folder_id": "90166393950"   # (optional) if you want lists in a specific folder
+        "team_id": "90161193440"   # your ClickUp Team ID
     })
 
-    plugin = GetLists()
+    plugin = GetSpaces()
     result = await plugin.execute(credentials, plugin_input)
     print(result.data)
 

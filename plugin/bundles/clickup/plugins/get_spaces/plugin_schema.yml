@@ -1,0 +1,11 @@
+name: get_spaces
+description: Retrieve all spaces in a ClickUp team
+input_parameters:
+  - name: team_id
+    type: string
+    description: The team ID from which to retrieve spaces
+    required: true
+output_parameters:
+  - name: spaces
+    type: array
+    description: A list of spaces including id, name, privacy, multiple_assignees, archived, and statuses

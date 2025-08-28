@@ -10,8 +10,8 @@ async def run():
     credentials = BundleCredentials(credentials={"CLICKUP_API_TOKEN": "pk_224694395_67HX9N5GIA9E3JT9BZ2LWIPBRQ8P32DV"})
     plugin_input = PluginInput(input_params={
         "list_id": "901610509518",
-        "name": "Test Task",
-        "description": "Created from plugin test"
+        "name": "Demo task for status update",
+        "description": "Just Checking"
     })
     plugin = CreateTask()
     result = await plugin.execute(credentials, plugin_input)

@@ -9,7 +9,7 @@ class ClickUpClient:
     async def request(self, method: str, endpoint: str, **kwargs):
         headers = {
             "Authorization": self.api_token,
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         }
         url = f"{self.base_url}{endpoint}"
 

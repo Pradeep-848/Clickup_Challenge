@@ -1,0 +1,23 @@
+name: create_space
+description: Create a new space inside a ClickUp team
+input_parameters:
+  - name: team_id
+    type: string
+    description: The team ID where the space will be created
+    required: true
+  - name: name
+    type: string
+    description: The name of the space to create
+    required: true
+  - name: multiple_assignees
+    type: boolean
+    description: Whether multiple assignees are allowed (default: true)
+    required: false
+  - name: features
+    type: object
+    description: Optional features configuration for the space (due dates, sprints, time tracking, etc.)
+    required: false
+output_parameters:
+  - name: space
+    type: object
+    description: Created space details including id, name, private, multiple_assignees, archived

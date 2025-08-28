@@ -9,10 +9,9 @@ async def run():
     credentials = BundleCredentials(credentials={"CLICKUP_API_TOKEN": "pk_224694395_67HX9N5GIA9E3JT9BZ2LWIPBRQ8P32DV"})
     plugin_input = PluginInput(input_params={
     "team_id": "90161193440",
-    "query": "Task",
-    "list_id": "901610509518",    # optional
-    "status": "✅ resolved",      # optional
-    "assignee": "224694395"       # optional
+    "query": "",
+    "list_id": "901610509518",
+    "status": "✅ resolved",  
     })
     plugin = SearchTasks()
     result = await plugin.execute(credentials, plugin_input)

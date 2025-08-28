@@ -1,5 +1,5 @@
 # A:\Clickup_Challenge\bundle_dependency.py
-from typing import Any, Dict, Optional
+from typing import Any, Dict
 from dataclasses import dataclass
 
 @dataclass
@@ -23,7 +23,9 @@ class PluginHandler:
         pass
 
 def raise_credentials_validation_error(message: str):
+    
     raise ValueError(f"Credentials validation error: {message}")
 
 def raise_provider_api_error(message: str):
+    
     raise ValueError(f"API error: {message}")

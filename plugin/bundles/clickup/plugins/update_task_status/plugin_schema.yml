@@ -1,0 +1,15 @@
+name: update_task_status
+description: Update the status of an existing ClickUp task
+input_parameters:
+  - name: task_id
+    type: string
+    description: The ID of the task to update
+    required: true
+  - name: status
+    type: string
+    description: The new status for the task (e.g., ✅ resolved, 🚩 new issue)
+    required: true
+output_parameters:
+  - name: task
+    type: object
+    description: Updated task details including id, name, status, url, and updated timestamp

@@ -1,0 +1,11 @@
+name: get_custom_fields
+description: Retrieve all custom fields for a specific list
+input_parameters:
+  - name: list_id
+    type: string
+    description: The ID of the list to fetch custom fields from
+    required: true
+output_parameters:
+  - name: custom_fields
+    type: array
+    description: A list of custom fields including id, name, type, required, and options
