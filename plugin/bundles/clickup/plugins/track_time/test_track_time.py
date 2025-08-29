@@ -13,7 +13,7 @@ async def run():
 
     now = int(time.time() * 1000)
     plugin_input = PluginInput(input_params={
-    "task_id": "86d00cg06",
+    "task_id": "86d02wz5p",
     "start": now - 600000,  # 10 minutes ago
     "end": now,             # now
     "description": "Test tracking - 10min"

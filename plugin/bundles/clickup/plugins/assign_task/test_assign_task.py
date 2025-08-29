@@ -11,7 +11,7 @@ async def run():
 
     plugin_input = PluginInput(input_params={
         "task_id": "86d02wz5p",
-        "assignee_id": "your_user_id"   # find from /team endpoint
+        "assignee_id": "224694395"   # find from /team endpoint
     })
 
     plugin = AssignTask()

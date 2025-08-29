@@ -8,17 +8,17 @@ class CreateChecklist(PluginHandler):
         client = ClickUpClient(api_token)
 
         task_id = plugin_input.input_params["task_id"]
-        checklist_name = plugin_input.input_params["name"]
+        name = plugin_input.input_params.get("name", "New Checklist")
 
         endpoint = f"/task/{task_id}/checklist"
-        body = {"name": checklist_name}
+        body = {"name": name}
 
         result = await client.request("POST", endpoint, json=body)
-
-        checklist_data = {
-            "id": result.get("id"),
-            "name": result.get("name"),
-            "task_id": task_id
+        checklist_data = result.get("checklist", {})
+        checklist = {
+            "id": checklist_data.get("id"),
+            "name": checklist_data.get("name"),
+            "task_id": (task_id)
         }
 
-        return PluginOutput(data={"checklist": json.dumps(checklist_data)})
+        return PluginOutput(data={"checklist": json.dumps(checklist)})
