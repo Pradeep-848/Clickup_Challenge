@@ -9,8 +9,6 @@ This suite supports **task management, comments, spaces, lists, custom fields, t
 
 - 📝 **Task Management**  
   Create, update, search, and manage tasks.
-- 💬 **Comments**  
-  Add and delete comments on tasks.
 - 📂 **Spaces & Lists**  
   Manage spaces and lists in your ClickUp workspace.
 - 🏷 **Custom Fields**  
@@ -207,7 +205,3 @@ python test_create_task.py
 - **Time interval overlaps** → When tracking time, ensure `start` and `end` don’t overlap existing entries.
 
 ---
-
-## 📜 License
-
-This project is licensed under the MIT License.
