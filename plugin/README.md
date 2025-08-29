@@ -79,10 +79,70 @@ plugin/
            │         ├── bundle_schema.yml   # Defines schema for all plugins
            │         └── icon.png            # Bundle icon
            └── plugins/
+                ├── add_task_comment/        # Plugin: Add comments to tasks
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_add_task_comment.py
+                ├── add_task_watcher/        # Plugin: Add Watchers to members
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_add_task_watcher.py
+                ├── assign_task/        # Plugin: Assign tasks for team members
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_assign_task.py
+                ├── create_checklist/        # Plugin: Add checklists to tasks
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_create_checklist.py
+                ├── create_list/             # Plugin: Create lists inside spaces/folders
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_create_list.py
+                ├── create_space/        # Plugin: Create a new space
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_create_space.py
                 ├── create_task/             # Plugin: Create new tasks
                 │    ├── plugin.py           # Logic to call ClickUp Create Task API
                 │    ├── plugin_schema.yml   # Schema: input/output definition
                 │    └── test_create_task.py # Test script for plugin
+                ├── delete_task/             # Plugin: Delete tasks
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_delete_task.py
+                ├── get_custom_fields/        # Plugin: Retrieve available custom fields
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_get_custom_fields.py
+                ├── get_lists/             # Plugin: Retrieve lists inside spaces/folders
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_get_lists.py
+                ├── get_task/                # Plugin: Retrieve a single task
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_get_task.py
+                ├── get_spaces/        # Plugin: List available spaces
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_get_spaces.py
+                ├── get_time_entries/        # Plugin: Retrieve tracked time for tasks
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_get_time_entries.py
+                ├── search_tasks/            # Plugin: Search tasks with filters
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_search_task.py
+                ├── set_custom_field_value/        # Plugin: Update custom field values on tasks
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_set_custom_field_value.py
+                ├── track_time/        # Plugin: Add tracked time entries to tasks
+                │    ├── plugin.py
+                │    ├── plugin_schema.yml
+                │    └── test_track_time.py
                 ├── update_task/             # Plugin: Update task details
                 │    ├── plugin.py
                 │    ├── plugin_schema.yml
@@ -91,42 +151,6 @@ plugin/
                 │    ├── plugin.py
                 │    ├── plugin_schema.yml
                 │    └── test_update_task_status.py
-                ├── delete_task/             # Plugin: Delete tasks
-                │    ├── plugin.py
-                │    ├── plugin_schema.yml
-                │    └── test_delete_task.py
-                ├── get_task/                # Plugin: Retrieve a single task
-                │    ├── plugin.py
-                │    ├── plugin_schema.yml
-                │    └── test_get_task.py
-                ├── search_tasks/            # Plugin: Search tasks with filters
-                │    ├── plugin.py
-                │    ├── plugin_schema.yml
-                │    └── test_search_task.py
-                ├── create_list/             # Plugin: Create lists inside spaces/folders
-                │    ├── plugin.py
-                │    ├── plugin_schema.yml
-                │    └── test_create_list.py
-                ├── add_task_comment/        # Plugin: Add comments to tasks
-                │    ├── plugin.py
-                │    ├── plugin_schema.yml
-                │    └── test_add_task_comment.py
-                ├── create_space/        # Plugin: Create a new space
-                │    ├── plugin.py
-                │    ├── plugin_schema.yml
-                │    └── test_create_space.py
-                ├── get_spaces/        # Plugin: List available spaces
-                │    ├── plugin.py
-                │    ├── plugin_schema.yml
-                │    └── test_get_spaces.py
-                ├── get_custom_fields/        # Plugin: Retrieve available custom fields
-                │    ├── plugin.py
-                │    ├── plugin_schema.yml
-                │    └── test_get_custom_fields.py
-                ├── set_custom_field_value/        # Plugin: Update custom field values on tasks
-                │    ├── plugin.py
-                │    ├── plugin_schema.yml
-                │    └── test_set_custom_field_value.py
 
 ```
 
@@ -136,16 +160,18 @@ plugin/
 
 ### 📝 Task Management
 - **create_task** – Create a new task.
-- **update_task_status** – Update status and name of tasks.
+- **update_task**: Update existing task properties
+- **delete_task**: Delete a task
 - **search_tasks** – Search tasks by name, status, or ID.
-
-### 💬 Comments
+- **get_task**: Retrieve detailed task information
 - **add_task_comment** – Add comments to a task.
+- **update_task_status** – Update status and name of tasks.
 
-### 📂 Spaces & Lists
+### 📂 List and Space Management
+- **create_list**: Create a new list in a folder/space
+- **get_lists** – Retrieve lists in a space.
 - **create_space** – Create a new space in a team.
 - **get_spaces** – Retrieve spaces for a team.
-- **get_lists** – Retrieve lists in a space.
 
 ### 🏷 Custom Fields
 - **get_custom_fields** – Retrieve available custom fields for a task.
